@@ -8,9 +8,17 @@ on:
 jobs:
   job1:
     permissions:
-      contents: write
+      contents: write  # required to push to the repo
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure Git identity
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "GitHub Action Bot"
+
       - name: Push commit
         run: |
           echo "Hello, GitHub!" > hello.txt
