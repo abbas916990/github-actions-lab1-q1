@@ -25,4 +25,4 @@ jobs:
           echo "Hello, GitHub! to test PR creation" > hello.txt
           git add hello.txt
           git commit -m "test-pr: Modified hello.txt"
-          git push
+          git push --set-upstream origin test-pr
