@@ -21,7 +21,7 @@ jobs:
 
       - name: Push commit
         run: |
-          git -b test-pr checkout
+          git branch -b test-pr checkout
           echo "Hello, GitHub! to test PR creation" > hello.txt
           git add hello.txt
           git commit -m "test-pr: Modified hello.txt"
